@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block main %}
+<div class="container-xl">
+
+    <div class="mt-4 mb-2">
+        <h3>Visualizar (Portabilidade #{{ pedido.id}})</h3>
+    </div>
+    <hr>
+    <div>
+        <p>Proprietário: {{ pedido.nome_razao_social }}</p>
+        <p>Documento: {{ pedido.cpf }}</p>
+        <p>Número(s): {{ pedido.numero_portar }}</p>
+        <p>Solicitação: {{ pedido.data_solicitacao }}</p>
+        <p>Endereço: {{ pedido.logradouro }}, {{ pedido.numero }} - {{ pedido.bairro }}/{{ pedido.cidade }}/({{ pedido.ud}})</p>
+        <p>SIP: {{ pedido.numero_sip }}</p>
+        <p>Status: {{ pedido.status }} <a href="/portabilidade/editar-portabilidade/{{ pedido.id }}">Alterar Dados </a></p>
+    </div>
+ 
+  
+
+</div>
+{% endblock %}

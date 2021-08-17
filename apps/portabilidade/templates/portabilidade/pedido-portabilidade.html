@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block main %}
+<div class="container-xl">
+
+    <div>
+        <h3>Pedidos de Portabilidade</h3>
+    </div>
+
+   <div class="table-responsive-sm">
+    <table class="table" >
+        <thead class="table-primary"> 
+          <tr>
+            <th scope="col">Pedido</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Solicitado</th>
+            <th scope="col">Status</th>
+            <th scope="col">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for pedido in pedidos %}
+          <tr>
+            <th scope="row">{{ pedido.id }}</th>
+            <td>{{ pedido.nome_razao_social }}</td>
+            <td>{{ pedido.data_solicitacao }}</td>
+            <td>{{ pedido.status }}</td>
+            <td>
+                <a href="/portabilidade/pedido-portabilidade/visualizar-portabilidade/?id={{ pedido.id }}">Visualizar</a>
+            </td>
+            {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+ 
+  
+
+</div>
+{% endblock %}

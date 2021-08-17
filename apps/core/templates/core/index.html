@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>:: Cortex Telecom</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block main %}
+<div class="container-xl">
+
+    <h1> Cortex Telecom</h1>
 
     <h2>Portabilidade</h2>
 
-    <a href="portabilidade/cadastrar-portabilidade">Solictar Portabilidade</a>
+    <a href="portabilidade/cadastrar-portabilidade">Solicitar Portabilidade</a><br>
 
-</body>
-</html>
+    <a href="portabilidade/pedido-portabilidade">Pedidos</a><br>
+ 
+   
+
+</div>
+{% endblock %}
